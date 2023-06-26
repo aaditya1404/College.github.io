@@ -12,7 +12,9 @@ const productRoutes = require('./routes/router');
 
 app.use(express.json());
 app.use(cookieParser(""));
-app.use(cors());
+app.use(cors(
+    
+));
 app.use(router);
 app.use( productRoutes);
 

@@ -2,10 +2,10 @@ const products = [
     {
         id: 'product1',
         url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEzCzWQTWNs62MWkuUyyfE7aNJD0RUWVco-w&usqp=CAU',
-        detailUrl: 'https://rukminim1.flixcart.com/image/416/416/kapoo7k0/electric-kettle/p/6/s/pigeon-favourite-original-imafs7xhj5uwgrh4.jpeg?q=70',
+        // detailUrl: 'https://rukminim1.flixcart.com/image/416/416/kapoo7k0/electric-kettle/p/6/s/pigeon-favourite-original-imafs7xhj5uwgrh4.jpeg?q=70',
         title: {
             shortTitle: 'Induction',
-            // longTitle: 'Pigeon FAVOURITE Electric Kettle  (1.5 L, Silver, Black)'
+            longTitle: 'Best inducction ever'
         },
         price: {
             mrp: 1195,
@@ -23,7 +23,7 @@ const products = [
         detailUrl: 'https://rukminim1.flixcart.com/image/416/416/kl6wx3k0/sandwich-maker/8/r/d/sandwich-01-flipkart-smartbuy-original-imagydds4zthxt8z.jpeg?q=70',
         title: {
             shortTitle: 'Elecltric Kettle',
-            // longTitle: 'Flipkart SmartBuy Sandwich 01 Grill  (Black)'
+            longTitle: ''
         },
         price: {
             mrp: 1499,
