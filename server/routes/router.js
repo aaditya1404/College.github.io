@@ -139,6 +139,34 @@ router.post("/addcart/:id",authenticate, async (req, res) => {
         res.status(401).json({error: "invalid user"});
     }
 });
-  
+
+// get data into the cart
+router.get("/cartdetails", authenticate, async (req, res) => {
+    try {
+        const buyuser = await USER.findOne({ _id: req.userID });
+        console.log(buyuser + "user hain buy pr");
+        res.status(201).json(buyuser);
+    } catch (error) {
+        console.log(error + "error for buy now");
+    }
+});
+
+
+// logout user api
+router.get("/logout", authenticate, async (req, res) => {
+    try {
+        req.rootUser.tokens = req.rootUser.tokens.filter((curelem) => {
+            return curelem.token !== req.token
+        });
+
+        res.clearCookie("CollegeBucket", { path: "/" });
+        req.rootUser.save();
+        res.status(201).json(req.rootUser.tokens);
+        console.log("user logout");
+
+    } catch (error) {
+        console.log(error + "not logout");
+    }
+});
 
 module.exports = router;
